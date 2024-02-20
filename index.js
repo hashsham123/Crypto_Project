@@ -1,9 +1,11 @@
 // server/server.js
-const express = require("express");
-const apiRouter = require("./routers/apiRouter.js");
-require("dotenv").config();
-const connectDB = require("./config/database.js");
+import express from "express";
+import apiRouter from "./routers/apiRouter.js";
+import dotenv from "dotenv";
+import connectDB from "./config/database.js";
 const app = express();
+dotenv.config();
+
 const port = process.env.PORT;
 
 connectDB();

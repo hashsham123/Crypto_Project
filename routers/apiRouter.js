@@ -1,10 +1,7 @@
-// routers/apiRouter.js
-const express = require('express');
-const apiController = require('../controller.js/apiController.js');
+import express from "express";
+import example from "../controller.js/apiController.js";
 
 const router = express.Router();
 
-router.get('/example', apiController.example);
-// Define more routes as needed
-
-module.exports = router;
+router.route("/example").get(example);
+export default router;
