@@ -2,6 +2,7 @@
 import express from "express";
 import cryptoList from "./routers/cryptoListRouter.js";
 import currencyPrice from "./routers/currencyPriceRouter.js";
+import getCompanies from "./routers/getCompaniesRouter.js";
 import dotenv from "dotenv";
 import connectDB from "./config/database.js";
 import cron from "node-cron";
@@ -18,6 +19,7 @@ app.use(express.json());
 // Routes
 app.use("/cryptolist", cryptoList);
 app.use("/currencyprice", currencyPrice);
+app.use("/companies", getCompanies);
 
 cron.schedule("0 * * * *", fetchDataAndSaveToDB);
 
