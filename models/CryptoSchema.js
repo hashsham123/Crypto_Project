@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 
 const cryptoCurrencySchema = new mongoose.Schema({
   id: String,
-  symbol: String,
+  crypto_id: String,
   name: String,
 });
 

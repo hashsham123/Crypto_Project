@@ -18,8 +18,8 @@
       const cryptoData = await fetchCryptoData();
       for (const crypto of cryptoData) {
         const newCrypto = new CryptoModel({
+          crypto_id: crypto.id,
           name: crypto.name,
-          symbol: crypto.symbol,
           // Add other fields as needed from the API response
         });
         await newCrypto.save();
