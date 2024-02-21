@@ -1,6 +1,6 @@
 // server/server.js
 import express from "express";
-import apiRouter from "./routers/apiRouter.js";
+import apiRouter from "./routers/cryptoListRouter.js";
 import dotenv from "dotenv";
 import connectDB from "./config/database.js";
 import cron from "node-cron";
