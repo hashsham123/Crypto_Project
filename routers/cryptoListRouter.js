@@ -6,7 +6,7 @@ import {
 
 const router = express.Router();
 
-router.route("/cryptoPost").post(fetchDataAndSaveToDB);
-router.route("/cryptoGet").get(getAllCryptoData);
+router.route("/cryptopost").post(fetchDataAndSaveToDB);
+router.route("/cryptoget").get(getAllCryptoData);
 
 export default router;
