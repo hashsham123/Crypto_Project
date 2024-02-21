@@ -1,7 +1,7 @@
 import express from "express";
-import example from "../controller.js/apiController.js";
+import {fetchDataAndSaveToDB} from "../controller/postDataController.js";
 
 const router = express.Router();
 
-router.route("/example").get(example);
+router.route("/cryptoPost").post(fetchDataAndSaveToDB);
 export default router;
